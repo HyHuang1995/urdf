@@ -1,0 +1,1193 @@
+<robot
+  name="zjudancerURDF">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0208293262310362 0.0080090301997606 -0.00911554239783212"
+        rpy="0 0 0" />
+      <mass
+        value="0.540875998303045" />
+      <inertia
+        ixx="0.00198815257681203"
+        ixy="3.61383751067365E-06"
+        ixz="-5.13308899389049E-06"
+        iyy="0.00127845415804462"
+        iyz="0.000133026039099894"
+        izz="0.00224195983699153" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/base_link.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.250980392156863 0.250980392156863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/base_link.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="HeadYaw">
+    <inertial>
+      <origin
+        xyz="-0.000345179135047391 -0.0267172826783171 -1.25612328837066E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0579542771191171" />
+      <inertia
+        ixx="1.94910114823733E-05"
+        ixy="-3.84202176913727E-07"
+        ixz="-2.1788375664448E-12"
+        iyy="1.1489962681525E-05"
+        iyz="1.52314344728411E-11"
+        izz="2.30934707566597E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/HeadYaw.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.866666666666667 0.909803921568627 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/HeadYaw.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="HeadYaw"
+    type="revolute">
+    <origin
+      xyz="-0.021584 -0.05865 -0.020408"
+      rpy="3.1416 -0.02764 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="HeadYaw" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-1.7"
+      upper="1.7"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="HeadPitch">
+    <inertial>
+      <origin
+        xyz="0.000232827325365077 0.0743784701197822 0.00629122846704461"
+        rpy="0 0 0" />
+      <mass
+        value="0.127630752753862" />
+      <inertia
+        ixx="9.58759288594825E-05"
+        ixy="2.7068878296526E-08"
+        ixz="-1.46120279992447E-08"
+        iyy="6.37124130380846E-05"
+        iyz="-1.39032063600842E-05"
+        izz="0.000137696804225242" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/HeadPitch.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.866666666666667 0.909803921568627 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/HeadPitch.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="HeadPitch"
+    type="revolute">
+    <origin
+      xyz="0 -0.037 0"
+      rpy="2.3666E-30 -6.9389E-16 3.1416" />
+    <parent
+      link="HeadYaw" />
+    <child
+      link="HeadPitch" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.7"
+      upper="1.7"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="RShoulder">
+    <inertial>
+      <origin
+        xyz="-0.0015216 0.042377 0.039565"
+        rpy="0 0 0" />
+      <mass
+        value="0.11888" />
+      <inertia
+        ixx="0.00020971"
+        ixy="6.5772E-06"
+        ixz="5.8253E-08"
+        iyy="5.6251E-05"
+        iyz="-5.8281E-06"
+        izz="0.0002001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/RShoulder.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.86667 0.9098 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/RShoulder.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RShoulder"
+    type="revolute">
+    <origin
+      xyz="-0.090484 -0.0399 -0.020408"
+      rpy="3.1416 -1.5708 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="RShoulder" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.7"
+      upper="1.7"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="RHand">
+    <inertial>
+      <origin
+        xyz="0.0833257163351804 0.000902994547307041 -0.00926588213450355"
+        rpy="0 0 0" />
+      <mass
+        value="0.0470941776045623" />
+      <inertia
+        ixx="6.60989693567866E-06"
+        ixy="-2.42325546400845E-06"
+        ixz="1.32651560598224E-20"
+        iyy="0.000230194618228517"
+        iyz="-3.82259903079613E-22"
+        izz="0.000236733873897789" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/RHand.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/RHand.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RHand"
+    type="revolute">
+    <origin
+      xyz="-0.0037735 0.096126 0.052584"
+      rpy="3.1416 -7.5804E-16 1.5708" />
+    <parent
+      link="RShoulder" />
+    <child
+      link="RHand" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.7"
+      upper="1.7"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="LShoulder">
+    <inertial>
+      <origin
+        xyz="0.00014187 0.042405 0.039565"
+        rpy="0 0 0" />
+      <mass
+        value="0.11888" />
+      <inertia
+        ixx="0.00020999"
+        ixy="5.4215E-07"
+        ixz="-1.704E-07"
+        iyy="5.5972E-05"
+        iyz="-5.8259E-06"
+        izz="0.0002001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/LShoulder.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.25098 0.25098 0.25098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/LShoulder.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LShoulder"
+    type="revolute">
+    <origin
+      xyz="0.047316 -0.0399 -0.020408"
+      rpy="0 1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="LShoulder" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.7"
+      upper="1.7"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="LHand">
+    <inertial>
+      <origin
+        xyz="-0.0832261685834999 -0.00417076309975184 -0.00926588213450361"
+        rpy="0 0 0" />
+      <mass
+        value="0.0470941776045622" />
+      <inertia
+        ixx="7.14386591152994E-06"
+        ixy="-1.11791926730606E-05"
+        ixz="7.16954742566721E-21"
+        iyy="0.000229660649252665"
+        iyz="6.57698421551188E-22"
+        izz="0.000236733873897789" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/LHand.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/LHand.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LHand"
+    type="revolute">
+    <origin
+      xyz="0 0.0962 0.052584"
+      rpy="-3.1416 1.7738E-16 -1.5708" />
+    <parent
+      link="LShoulder" />
+    <child
+      link="LHand" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.7"
+      upper="1.7"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="RHipYaw">
+    <inertial>
+      <origin
+        xyz="0.00016521 -0.011755 -0.0050637"
+        rpy="0 0 0" />
+      <mass
+        value="0.031461" />
+      <inertia
+        ixx="2.3834E-05"
+        ixy="-1.1654E-08"
+        ixz="-8.5111E-10"
+        iyy="2.1651E-05"
+        iyz="5.4121E-08"
+        izz="9.4522E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/RHipYaw.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.86667 0.9098 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/RHipYaw.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RHipYaw"
+    type="revolute">
+    <origin
+      xyz="-0.081684 0.1026 -0.020354"
+      rpy="6.123E-17 -2.7756E-15 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="RHipYaw" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.7"
+      upper="1.7"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="RHipRoll">
+    <inertial>
+      <origin
+        xyz="-0.00411310755183356 -0.0126360407831169 -0.0481640865463906"
+        rpy="0 0 0" />
+      <mass
+        value="0.187310637380507" />
+      <inertia
+        ixx="0.000205637944340632"
+        ixy="-5.76817498493574E-06"
+        ixz="-3.57815869953642E-06"
+        iyy="0.000191205571193831"
+        iyz="-1.00837420891128E-05"
+        izz="7.8782502294624E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/RHipRoll.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.882352941176471 0.913725490196078 0.964705882352941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/RHipRoll.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RHipRoll"
+    type="revolute">
+    <origin
+      xyz="0 -0.04 -0.0315"
+      rpy="-3.1416 -2.6346E-15 2.8215" />
+    <parent
+      link="RHipYaw" />
+    <child
+      link="RHipRoll" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.7"
+      upper="1.7"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="RHipPitch">
+    <inertial>
+      <origin
+        xyz="-0.000539777794404738 -0.119511170659045 0.0289145644707088"
+        rpy="0 0 0" />
+      <mass
+        value="0.157055119718314" />
+      <inertia
+        ixx="0.000354792475912493"
+        ixy="1.00450261055402E-06"
+        ixz="7.19523224998815E-09"
+        iyy="7.65492849391043E-05"
+        iyz="-6.80650359950641E-07"
+        izz="0.000310437387545802" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/RHipPitch.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/RHipPitch.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RHipPitch"
+    type="revolute">
+    <origin
+      xyz="-0.027527 0.0091246 -0.0315"
+      rpy="0.32008 1.5708 0" />
+    <parent
+      link="RHipRoll" />
+    <child
+      link="RHipPitch" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.7"
+      upper="1.7"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="RKnee">
+    <inertial>
+      <origin
+        xyz="-0.00137487246241106 -0.0785718139027019 0.0289999999999999"
+        rpy="0 0 0" />
+      <mass
+        value="0.0530853439931548" />
+      <inertia
+        ixx="0.000203527846057276"
+        ixy="1.90286639712834E-06"
+        ixz="-3.20449384208379E-20"
+        iyy="4.37203773624098E-05"
+        iyz="2.38327675182106E-19"
+        izz="0.000171534429178642" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/RKnee.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/RKnee.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RKnee"
+    type="revolute">
+    <origin
+      xyz="0 -0.16 0"
+      rpy="1.3878E-15 -1.3878E-15 1.9259E-30" />
+    <parent
+      link="RHipPitch" />
+    <child
+      link="RKnee" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.7"
+      upper="1.7"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="RAnklePitch">
+    <inertial>
+      <origin
+        xyz="0.016089 -0.022652 0.013431"
+        rpy="0 0 0" />
+      <mass
+        value="0.18054" />
+      <inertia
+        ixx="7.5559E-05"
+        ixy="2.0676E-06"
+        ixz="-5.0596E-06"
+        iyy="0.00018067"
+        iyz="6.3424E-07"
+        izz="0.00015996" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/RAnklePitch.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29412 0.29412 0.29412 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/RAnklePitch.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RAnklePitch"
+    type="revolute">
+    <origin
+      xyz="0 -0.16 0.006"
+      rpy="-1.5708 7.8886E-31 0" />
+    <parent
+      link="RKnee" />
+    <child
+      link="RAnklePitch" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-1.7"
+      upper="1.7"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="RAnkleRoll">
+    <inertial>
+      <origin
+        xyz="8.3267E-17 -0.02182 0.049567"
+        rpy="0 0 0" />
+      <mass
+        value="0.019109" />
+      <inertia
+        ixx="4.7887E-05"
+        ixy="5.6632E-21"
+        ixz="-1.0583E-20"
+        iyy="4.5961E-05"
+        iyz="-7.8252E-07"
+        izz="4.7707E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/RAnkleRoll.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.86667 0.9098 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/RAnkleRoll.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RAnkleRoll"
+    type="revolute">
+    <origin
+      xyz="-0.0365 -0.023 0"
+      rpy="1.5708 -1.4444E-30 1.5708" />
+    <parent
+      link="RAnklePitch" />
+    <child
+      link="RAnkleRoll" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.7"
+      upper="1.7"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="r_sole">
+    <inertial>
+      <origin
+        xyz="-1.3878E-17 0.00093248 0.0012291"
+        rpy="0 0 0" />
+      <mass
+        value="0.098145" />
+      <inertia
+        ixx="0.00028349"
+        ixy="4.2827E-20"
+        ixz="-1.537E-19"
+        iyy="6.9882E-05"
+        iyz="-2.4788E-08"
+        izz="0.00035276" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/r_sole.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/r_sole.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_sole"
+    type="fixed">
+    <origin
+      xyz="0.017 -0.038 0.0225"
+      rpy="-1.5708 6.9389E-16 -1.9259E-30" />
+    <parent
+      link="RAnkleRoll" />
+    <child
+      link="r_sole" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="LHipYaw">
+    <inertial>
+      <origin
+        xyz="-0.020829 0.008009 -0.0091155"
+        rpy="0 0 0" />
+      <mass
+        value="0.54088" />
+      <inertia
+        ixx="0.0019882"
+        ixy="3.6138E-06"
+        ixz="-5.1331E-06"
+        iyy="0.0012785"
+        iyz="0.00013303"
+        izz="0.002242" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/LHipYaw.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.25098 0.25098 0.25098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/LHipYaw.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LHipYaw"
+    type="revolute">
+    <origin
+      xyz="0.038516 0.1026 -0.020354"
+      rpy="-2.8869E-16 -0.14372 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="LHipYaw" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.7"
+      upper="1.7"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="LHipRoll">
+    <inertial>
+      <origin
+        xyz="0.016909 -0.00058218 0.012978"
+        rpy="0 0 0" />
+      <mass
+        value="0.1916" />
+      <inertia
+        ixx="7.9917E-05"
+        ixy="7.33E-07"
+        ixz="-1.0063E-05"
+        iyy="0.00020902"
+        iyz="1.273E-06"
+        izz="0.00018997" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/LHipRoll.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29412 0.29412 0.29412 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/LHipRoll.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LHipRoll"
+    type="revolute">
+    <origin
+      xyz="0 -0.04 0"
+      rpy="1.6335 -1.5708 0" />
+    <parent
+      link="LHipYaw" />
+    <child
+      link="LHipRoll" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.7"
+      upper="1.7"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="LHipPitch">
+    <inertial>
+      <origin
+        xyz="-0.11951 -0.00075639 8.5435E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.15706" />
+      <inertia
+        ixx="7.6547E-05"
+        ixy="5.0018E-07"
+        ixz="6.8066E-07"
+        iyy="0.0003548"
+        iyz="-5.9615E-09"
+        izz="0.00031044" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/LHipPitch.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/LHipPitch.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LHipPitch"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="-3.1055 1.5205 1.6069" />
+    <parent
+      link="LHipRoll" />
+    <child
+      link="LHipPitch" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.7"
+      upper="1.7"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="LKnee">
+    <inertial>
+      <origin
+        xyz="0.078569 -0.0015173 -0.017149"
+        rpy="0 0 0" />
+      <mass
+        value="0.053085" />
+      <inertia
+        ixx="4.3714E-05"
+        ixy="-1.6132E-06"
+        ixz="-2.8799E-20"
+        iyy="0.00020353"
+        iyz="-8.611E-22"
+        izz="0.00017153" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/LKnee.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/LKnee.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LKnee"
+    type="revolute">
+    <origin
+      xyz="-0.16 -0.00029 -0.017149"
+      rpy="3.1416 -2.8276E-16 -3.1416" />
+    <parent
+      link="LHipPitch" />
+    <child
+      link="LKnee" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.7"
+      upper="1.7"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="LAnklePitch">
+    <inertial>
+      <origin
+        xyz="-0.013402 0.016113 -0.017497"
+        rpy="0 0 0" />
+      <mass
+        value="0.18054" />
+      <inertia
+        ixx="0.00015998"
+        ixy="4.9066E-06"
+        ixz="6.3049E-07"
+        iyy="7.5541E-05"
+        iyz="-2.0687E-06"
+        izz="0.00018067" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/LAnklePitch.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29412 0.29412 0.29412 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/LAnklePitch.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LAnklePitch"
+    type="revolute">
+    <origin
+      xyz="0.16 -0.00029 0"
+      rpy="1.7276E-17 0 0" />
+    <parent
+      link="LKnee" />
+    <child
+      link="LAnklePitch" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.7"
+      upper="1.7"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="LAnkleRoll">
+    <inertial>
+      <origin
+        xyz="0.021786 -0.018723 2.7756E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.019109" />
+      <inertia
+        ixx="4.5964E-05"
+        ixy="7.0786E-07"
+        ixz="5.9822E-21"
+        iyy="4.768E-06"
+        iyz="4.8E-21"
+        izz="4.7887E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/LAnkleRoll.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.86667 0.9098 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/LAnkleRoll.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LAnkleRoll"
+    type="revolute">
+    <origin
+      xyz="5.7548E-05 0.031751 -0.017149"
+      rpy="1.7276E-17 0 0" />
+    <parent
+      link="LAnklePitch" />
+    <child
+      link="LAnkleRoll" />
+    <axis
+      xyz="0.0018125 1 0" />
+    <limit
+      lower="-1.7"
+      upper="1.7"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="l_sole">
+    <inertial>
+      <origin
+        xyz="0.039185 -0.084068 0.017218"
+        rpy="0 0 0" />
+      <mass
+        value="0.098145" />
+      <inertia
+        ixx="0.00028366"
+        ixy="1.2443E-09"
+        ixz="-3.4731E-06"
+        iyy="6.9882E-05"
+        iyz="-2.4757E-08"
+        izz="0.00035259" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/l_sole.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zjudancerURDF/meshes/l_sole.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_sole"
+    type="fixed">
+    <origin
+      xyz="0.051763 -0.13085 0.057"
+      rpy="3.1416 1.5206 -0.0018125" />
+    <parent
+      link="LAnkleRoll" />
+    <child
+      link="l_sole" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+</robot>
